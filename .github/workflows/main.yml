@@ -7,4 +7,15 @@ jobs:
 run-name: Checkout code
         uses: actions/checkout@v2
         run: echo "Running simple test"
+        
+
+  second-stage:
+    runs-on: ubuntu-latest
+    needs: first-stage
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run second stage
+        run: echo "Second stage completed"
+
 
