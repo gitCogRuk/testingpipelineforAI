@@ -1,0 +1,10 @@
+name: main
+on: push
+jobs:
+  run-test:
+    runs-on: Windows-latest
+    steps:
+run-name: Checkout code
+        uses: actions/checkout@v2
+        run: echo "Running simple test"
+
